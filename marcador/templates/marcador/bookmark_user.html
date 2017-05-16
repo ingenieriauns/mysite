@@ -1,0 +1,14 @@
+{% extends "marcador/bookmark_list.html" %}
+{% load marcador_tags %}
+
+{% block title %}{{ owner.username }}'s marcadores{% endblock %}
+
+{% block heading %}
+  <h2>Marcadores de {{ owner.first_name }} {{ owner.last_name}}<br>
+    <small>{{ bookmarks.count }} marcadores en total</small>
+  </h2>
+{% endblock %}
+
+{% block sidebar %}
+  {% tagcloud owner %}
+{% endblock %}

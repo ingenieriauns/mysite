@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Últimos marcadores{% endblock %}
+
+{% block heading %}
+  <h2>Últimos marcadores</h2>
+{% endblock %}
+
+{% block content %}
+  <ul class="list-unstyled">
+  {% for bookmark in bookmarks %}
+    <li class="well well-sm">{% include "marcador/bookmark.html" %}</li>
+  {% empty %}
+    <li>No tienes marcadores. :(</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
